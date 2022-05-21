@@ -1,0 +1,6 @@
+https://github.com/lutzhamel/fake-news/blob/master/data/fake_or_real_news.csv
+
+Also at:
+
+https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news
+
