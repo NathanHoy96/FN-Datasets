@@ -1,1 +1,3 @@
 https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+
+Appears to be a duplicate of the ISOT dataset
