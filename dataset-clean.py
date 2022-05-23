@@ -52,3 +52,15 @@ FakeNewsNet_politifact_merged = pd.concat([FakeNewsNet_politifact_fake,FakeNewsN
 FakeNewsNet_buzzfeed_merged = pd.concat([FakeNewsNet_buzzfeed_fake,FakeNewsNet_buzzfeed_true])
 
 print(FakeNewsNet_politifact_merged.tail())
+
+#Kaggle Fake News Competition Dataset
+
+kaggle_comp_dataset = pd.read_csv(".\\Datasets\\Original Downloads\\Fake News (Kaggle Competition)\\train.csv")
+print(kaggle_comp_dataset.head()) #Appears fine as is, write to clean folder
+
+ISOT_merged.to_csv(".\\Datasets\\Cleaned\\ISOT.csv",index=False)
+Kaggle_merged.to_csv(".\\Datasets\\Cleaned\\Kaggle Fake and Real.csv",index=False)
+kaggle_comp_dataset.to_csv(".\\Datasets\\Cleaned\\Kaggle Competition.csv",index=False)
+KDNuggets_dataset.to_csv(".\\Datasets\\Cleaned\\KDNuggets.csv",index=False)
+FakeNewsNet_politifact_merged.to_csv(".\\Datasets\\Cleaned\\FakeNewsNet Politifact.csv",index=False)
+FakeNewsNet_buzzfeed_merged.to_csv(".\\Datasets\\Cleaned\\FakeNewsNet Buzzfeed.csv",index=False)
