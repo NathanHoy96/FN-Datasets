@@ -2,7 +2,9 @@
 
 This repository contains a collection of Fake News datasets that are popular in the research literature. Note that the focus are datasets that contain the full-text of the articles. As such, datasets such as LIAR and FNC-1 have been omitted either, for not containing the full-text or for being more focussed on what could be defined as click-bait rather than fake news.
 
-URLs associated with each dataset are contained in .txt files in each folder of 'Original Downloads'. 
+URLs associated with each dataset are contained in .txt files in each folder of 'Original Downloads'.
+
+The cleaned folder contains versions of the datasets that may have had two CSVs merged together with labels added (where 0 indicates 'Fake' and 1 indicates 'True'). Some columns may have also been dropped in these versions.
 
 Citations:
 
