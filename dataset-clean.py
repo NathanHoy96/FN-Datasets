@@ -30,3 +30,25 @@ KDNuggets_dataset = pd.read_csv(".\\Datasets\\Original Downloads\\KDNuggets\\fak
 KDNuggets_dataset['label'] = KDNuggets_dataset['label'].str.replace("FAKE","0")
 KDNuggets_dataset['label'] = KDNuggets_dataset['label'].str.replace("REAL","1")
 print(KDNuggets_dataset.head())
+
+#FakeNewsNet
+
+FakeNewsNet_politifact_fake = pd.read_csv(".\\Datasets\\Original Downloads\\FakeNewsNet\\PolitiFact_fake_news_content.csv")
+FakeNewsNet_politifact_true = pd.read_csv(".\\Datasets\\Original Downloads\\FakeNewsNet\\PolitiFact_real_news_content.csv")
+FakeNewsNet_buzzfeed_fake = pd.read_csv(".\\Datasets\\Original Downloads\\FakeNewsNet\\BuzzFeed_fake_news_content.csv")
+FakeNewsNet_buzzfeed_true = pd.read_csv(".\\Datasets\\Original Downloads\\FakeNewsNet\\BuzzFeed_real_news_content.csv")
+
+FakeNewsNet_politifact_fake = FakeNewsNet_politifact_fake[["title","text"]]
+FakeNewsNet_politifact_true = FakeNewsNet_politifact_true[["title","text"]]
+FakeNewsNet_buzzfeed_fake = FakeNewsNet_buzzfeed_fake[["title","text"]]
+FakeNewsNet_buzzfeed_true = FakeNewsNet_buzzfeed_true[["title","text"]]
+
+FakeNewsNet_politifact_fake['label'] = 0
+FakeNewsNet_politifact_true['label'] = 1
+FakeNewsNet_buzzfeed_fake['label'] = 0
+FakeNewsNet_buzzfeed_true['label'] = 1
+
+FakeNewsNet_politifact_merged = pd.concat([FakeNewsNet_politifact_fake,FakeNewsNet_politifact_true])
+FakeNewsNet_buzzfeed_merged = pd.concat([FakeNewsNet_buzzfeed_fake,FakeNewsNet_buzzfeed_true])
+
+print(FakeNewsNet_politifact_merged.tail())
